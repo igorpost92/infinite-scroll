@@ -43,9 +43,7 @@ const List = () => {
       rootMargin: '0px 0px 750px 0px',
     });
 
-    const list = listRef.current.children;
-    const lastNode = list[list.length - 1];
-
+    const lastNode = listRef.current.lastElementChild;
     observer.observe(lastNode);
   }, [data]);
 
